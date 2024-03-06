@@ -41,9 +41,8 @@ func TestTraceOpen(t *testing.T) {
 
 	traceOpenCmd := &integration.Command{
 		Name: "TraceOpen",
-		Cmd:  "IG_EXPERIMENTAL=true sudo -E ig run docker.io/pawarpranav83/traceopen:latest",
+		Cmd:  "ig run docker.io/pawarpranav83/traceopen:latest",
 		ValidateOutput: func(t *testing.T, output string) {
-			fmt.Println("hello")
 			expectedEntry := &traceOpenEvent{
 				Event: eventtypes.Event{
 					Type: eventtypes.NORMAL,
@@ -81,8 +80,8 @@ func TestTraceOpen(t *testing.T) {
 		},
 	}
 	testSteps := []integration.TestStep{
-		containerFactory.NewContainer(cn, "setuidgid 1000:1111 cat /dev/null"),
 		traceOpenCmd,
+		containerFactory.NewContainer(cn, "setuidgid 1000:1111 cat /dev/null"),
 	}
 
 	integration.RunTestSteps(testSteps, t)
