@@ -29,6 +29,7 @@ type traceOpenEvent struct {
 	FullPath string      `json:"fullPath,omitempty" column:"fullPath,minWidth:24,width:32" columnTags:"param:full-path"`
 }
 
+// Need to build the gadget image first before running the test
 func TestTraceOpen(t *testing.T) {
 	cn := "test-trace-open"
 	// handle err
