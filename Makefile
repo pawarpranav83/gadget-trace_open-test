@@ -1,5 +1,5 @@
 TAG := latest
-CONTAINER_REPO ?= docker.io/pawarpranav83/traceopen
+CONTAINER_REPO ?= docker.io/pawarpranav83/trace_open
 IMAGE_TAG ?= $(TAG)
 CLANG_FORMAT ?= clang-format
 
