@@ -41,8 +41,9 @@ func TestTraceOpen(t *testing.T) {
 	// utils.WrapperForIg()
 
 	traceOpenCmd := &integration.Command{
-		Name: "TraceOpen",
-		Cmd:  "ig run docker.io/pawarpranav83/traceopen:latest",
+		Name:         "TraceOpen",
+		Cmd:          "ig run ghcr.io/inspektor-gadget/gadget/trace_open:latest --runtimes=docker -o json",
+		StartAndStop: true,
 		ValidateOutput: func(t *testing.T, output string) {
 			expectedEntry := &traceOpenEvent{
 				Event: eventtypes.Event{
@@ -67,8 +68,9 @@ func TestTraceOpen(t *testing.T) {
 			}
 
 			normalize := func(e *traceOpenEvent) {
-				e.Pid = 0
+				e.Timestamp = 0
 				e.MountNsID = 0
+				e.Pid = 0
 
 				e.Runtime.ContainerID = ""
 				// TODO: Handle once we support getting ContainerImageName from Docker
