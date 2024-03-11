@@ -1,5 +1,5 @@
-TAG := $(shell git describe --tags --always --dirty)
-CONTAINER_REPO ?= ghcr.io/changeme-org/changeme-gadget-name
+TAG := latest
+CONTAINER_REPO ?= docker.io/pawarpranav83/trace_open
 IMAGE_TAG ?= $(TAG)
 CLANG_FORMAT ?= clang-format
 
@@ -7,6 +7,7 @@ export IG_EXPERIMENTAL = true
 
 .PHONY: build
 build:
+	cd trace_open/bpf && \
 	sudo -E ig image build \
 		-t $(CONTAINER_REPO):$(IMAGE_TAG) \
 		--update-metadata .

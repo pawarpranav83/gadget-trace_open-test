@@ -12,10 +12,10 @@ Steps to use this template:
 
 ---
 
-# CHANGEME-GADGET-NAME
+# TRACE_OPEN
 
-CHANGEME-GADGET-NAME is a [gadget from Inspektor
-Gadget](https://inspektor-gadget.io/). It detects CHANGEME...
+TRACE_OPEN is a [gadget from Inspektor
+Gadget](https://inspektor-gadget.io/).
 
 ## How to use
 
