@@ -1,17 +1,3 @@
-# gadget-template
-
-This repository is a template repository to help you create your own gadgets.
-
-Steps to use this template:
-- Click on [use this template](https://github.com/new?template_name=gadget-template&template_owner=inspektor-gadget)
-- Choose a name for your repository
-- Click on *Create repository*
-- Update the placeholders (`git grep -i CHANGEME`, `git grep -i TODO`)
-- Write your eBPF program (follow [Hello world gadget](https://inspektor-gadget.io/docs/latest/devel/hello-world-gadget/))
-- Delete this section from README.md
-
----
-
 # TRACE_OPEN
 
 TRACE_OPEN is a [gadget from Inspektor
