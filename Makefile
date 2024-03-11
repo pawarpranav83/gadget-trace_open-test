@@ -7,7 +7,7 @@ export IG_EXPERIMENTAL = true
 
 .PHONY: build
 build:
-	cd gadgets/trace_open/bpf && \
+	cd trace_open/bpf && \
 	sudo -E ig image build \
 		-t $(CONTAINER_REPO):$(IMAGE_TAG) \
 		--update-metadata .

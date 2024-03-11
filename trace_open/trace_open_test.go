@@ -7,9 +7,12 @@ import (
 
 	"github.com/inspektor-gadget/inspektor-gadget/integration"
 	eventtypes "github.com/inspektor-gadget/inspektor-gadget/pkg/types"
+	// IG "github.com/pawarpranav83/ig-testing-framework"
 )
 
 type EventType string
+
+const ImageName = "docker.io/pawarpranav83/trace_open:latest"
 
 type Event struct {
 	eventtypes.CommonData
